@@ -6,7 +6,7 @@ Barefoot Nomad API
 
 The full API documentation can be found by following the link below:
 
-[link](http://localhost:4111/v1/api-docs/)
+[http://localhost:4111/v1/api-docs/](http://localhost:4111/v1/api-docs/)
 
 ## Requirements and Installation
 
@@ -17,7 +17,7 @@ The full API documentation can be found by following the link below:
 git clone https://github.com/vic3king/barefoot.git
 
 # Switch to directory
-cd backend-worksample
+cd barefoot
 
 # Install Package dependencies
 npm install
@@ -29,7 +29,7 @@ touch .env
 npm run start:dev
 
 #View the application
-navigate to localhost:3000 to view the application
+navigate to localhost:4111 to view the application
 ```
 
 ## Testing
@@ -89,8 +89,9 @@ npm run test
 
 </table>
 
-## Possible Improvements
+## Improvements
 
+- More tests and Type Checks
 - Dockerize
 - Deploy
   
