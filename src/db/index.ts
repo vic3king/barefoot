@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import logger from '../lib/logger';
 
 dotenv.config();
 
@@ -9,9 +10,9 @@ const connect = async (): Promise<void> => {
     try {
         const uri = NODE_ENV === 'test' ? TEST_MONGO_URI : MONGODB_URL;
         await mongoose.connect(uri as string);
-        console.log('Connected to MongoDB');
+        logger.log('info', 'Connected to MongoDB');
     } catch (error) {
-        console.log('Failed to connect to MongoDB:', error);
+        logger.error('Failed to connect to MongoDB:', error);
         throw error;
     }
 };
@@ -19,9 +20,9 @@ const connect = async (): Promise<void> => {
 const close = async (): Promise<void> => {
     try {
         await mongoose.disconnect();
-        console.log('Disconnected from MongoDB');
+        logger.log('info', 'Connected to MongoDB');
     } catch (error) {
-        console.error('Error while disconnecting from MongoDB:', error);
+        logger.error('Error while disconnecting from MongoDB:', error);
         throw error;
     }
 };

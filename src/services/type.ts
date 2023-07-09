@@ -5,6 +5,5 @@ export interface UserSearchParams {
         sort?: object;
         limit?: number;
         skip?: number;
-        populate?: string;
     };
 }

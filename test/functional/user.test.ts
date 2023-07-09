@@ -161,7 +161,6 @@ describe('GET ALL USERS', () => {
 
         const { success, message, data } = res.body;
 
-        console.log(res.body);
         expect(res.statusCode).toEqual(200);
         expect(success).toBe(true);
         expect(message).toEqual('Users retrieved successfully');

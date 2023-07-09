@@ -14,7 +14,6 @@ const colors = {
     info: 'green',
     verbose: 'gray',
     debug: 'blue',
-    silly: 'grey',
 };
 
 const level = () => {

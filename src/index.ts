@@ -9,6 +9,7 @@ import { connect } from './db';
 import routes from './routes/index';
 import swaggerSpec from '../documentation/swagger.json';
 import morganMiddleware from './config/morgan';
+import logger from './lib/logger';
 
 dotenv.config();
 
@@ -46,7 +47,7 @@ app.all('*', (_req, res) => {
 connect().then(() => {
     if (process.env.NODE_ENV !== 'test') {
         app.listen(port, () => {
-            console.log(`Listening on port ${port}...`);
+            logger.log('info', `Listening on port ${port}...`);
         });
     }
 });

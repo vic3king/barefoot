@@ -1,7 +1,7 @@
 import { model } from 'mongoose';
 import userSchema from '../schemas/user-schema';
 import authHelper from '../../helpers/auth';
-// import { IUser } from './type';
+import { IUser } from './type';
 
 userSchema.pre('validate', async function hashPassword() {
     if (this.isNew) {
@@ -16,6 +16,6 @@ userSchema.methods.toJSON = function () {
     return userObject;
 };
 
-const User = model('User', userSchema);
+const User = model<IUser>('User', userSchema);
 
 export default User;
