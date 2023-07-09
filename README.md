@@ -91,6 +91,7 @@ npm run test
 
 ## Improvements
 
+- Central error handler
 - More tests and Type Checks
 - Dockerize
 - Deploy
