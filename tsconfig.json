@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "target": "ES6",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+  },
+  "exclude": [
+    "dist",
+    "coverage/"
+  ]
+}

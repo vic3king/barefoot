@@ -1,0 +1,127 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Barefoot Nomad API",
+    "description": "Barefoot Nomad API",
+    "version": "1.0",
+    "contact": {
+      "email": ""
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "Welcome",
+      "description": "Welcome to Barefoot Nomad API"
+    },
+    {
+      "name": "User",
+      "description": "Create user"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Welcome"
+        ],
+        "summary": "GET API endpoint for welcome page",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "welcome"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "GET API endpoint for all users",
+        "parameters": {
+          "in": "header",
+          "name": "Authorization",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Users retrieved successfully"
+          },
+          "401": {
+            "description": "User not authorized"
+          },
+          "403": {
+            "description": "Invalid token"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "POST API endpoint for creating a new user",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "name of the user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email of the user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "users password",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User created successfully'"
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "securityDefinitions": {
+      "JWT": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
