@@ -23,7 +23,7 @@ export default class UserService {
      * @param {object} params
      * @returns {Promise<any>} new user
      */
-    static async getAll(params: UserSearchParams): Promise<UserTypeModel[]> {
+    static async getAll(params: UserSearchParams) {
         return userRepository.getAll(params);
     }
 
@@ -33,7 +33,7 @@ export default class UserService {
      * @param {object} params
      * @returns {Promise<any>} new user
      * */
-    static async getOne(params: UserSearchParams): Promise<UserTypeModel> {
+    static async getOne(params: UserSearchParams) {
         return userRepository.getOne(params);
     }
 }

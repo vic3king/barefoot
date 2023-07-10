@@ -49,7 +49,7 @@ npm run test
 - [MongooseORM](https://mongoosejs.com/) Elegant mongodb object modeling for node.js
 - [Jest](https://jestjs.io/) Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 - [Supertest](https://www.npmjs.com/package/supertest) SuperAgent driven library for testing HTTP servers
-
+- [Joi](https://github.com/hapijs/joi) The most powerful schema description language and data validator for JavaScript.
 #### Linter(s)
 
 - [GTS](https://github.com/google/gts) gts is Google's TypeScript style guide, and the configuration for our formatter, linter, and automatic code fixer.

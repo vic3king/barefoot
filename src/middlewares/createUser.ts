@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import Joi from '@hapi/joi';
+import Joi from 'joi';
 import joiFormatter from '../helpers/joi-formatter';
 import userService from '../services/user';
 
